@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .demo a{
+      float:left;
+      display: block;
+      height:50px;
+      width:50px;
+      border-radius: 10px;
+      background: blue;
+      color:white;
+      text-align: center;
+      text-decoration: none;
+      margin-right: 5px;
+      font:bold 20px/50px Arial;
+    }
+    /*
+    属性名，属性名==属性值（正则）
+    =绝对等于
+    *=包含这个元素
+    ^=以这个开头
+    $=以这个结尾
+    */
+    /*存在id属性的元素 a[]{}*/
+    a[id]{
+      background: yellow;
+    }
+
+
+    a[class="links item first"]{
+      color:red;
+    }
+
+    /*选择class中包含link的元素*/
+    a[class*="link"]{
+      background: #02ff00;
+    }
+  /*选中href中以http开头的元素*/
+    a[href^=http]{
+      background: red;
+    }
+    /*选中herf中png结尾的元素*/
+    a[href$=png]{
+      color:black;
+    }
+
+  </style>
+</head>
+<body>
+<p class="demo">
+  <a href="www.baidu.com" class="links item first" id="first">1</a>
+  <a href="" class="link item active" target="_blank" title="test">2</a>
+  <a href="images/123.html" class="link items">3</a>
+  <a href="images/123.png" class="link items">4</a>
+  <a href="images/123.jpg" class="link items">5</a>
+  <a href="abc" class="link items">6</a>
+  <a href="123" class="link items">7</a>
+  <a href="sddsd" class="link items">8</a>
+  <a href="dsds" class="link items">9</a>
+</p>
+</body>
+</html>

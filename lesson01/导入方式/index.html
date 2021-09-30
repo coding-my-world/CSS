@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+<!--  内部样式：   规范 <style>可以编写css的代码，没有一个声明，最好使用分号结尾
+        语法：
+        选择器{
+            声明1；
+            声明2；
+            声明3；
+        }-->
+    <style>
+        h2{
+            color:red;
+        }
+    </style>
+    <style>
+        @import url("css/style.css");
+    </style>
+
+<!--   外部样式-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<h1>我是标题</h1>
+<!--      优先级：就近原则 -->
+<h2 style="color:red">标题2</h2>
+</body>
+</html>
